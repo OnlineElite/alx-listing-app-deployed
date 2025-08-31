@@ -38,8 +38,7 @@ export default function Home() {
     setActiveFilter(filter);
   };
 
-  const filteredProperties = properties? 
-  properties.filter((property : PropertyProps) => {
+  const filteredProperties = (properties? properties : PROPERTYLISTINGSAMPLE).filter((property : PropertyProps) => {
     return (
       activeFilter === 'All' ||
       property.category?.some((cat) =>
@@ -48,15 +47,7 @@ export default function Home() {
       property.name.toLowerCase().includes(activeFilter.toLowerCase())
     );
   })
-  : PROPERTYLISTINGSAMPLE.filter((property : PropertyProps) => {
-    return (
-      activeFilter === 'All' ||
-      property.category?.some((cat) =>
-        cat.toLowerCase().includes(activeFilter.toLowerCase())
-      ) ||
-      property.name.toLowerCase().includes(activeFilter.toLowerCase())
-    );
-  });
+  
 
   return (
     <div className="min-h-screen bg-gray-50">

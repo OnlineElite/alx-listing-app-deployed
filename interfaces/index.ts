@@ -26,6 +26,7 @@ export interface offers {
 }
 
 export interface PropertyProps {
+  id : number;
   name: string;
   address: address;
   rating: number;
@@ -35,7 +36,7 @@ export interface PropertyProps {
   image: string;
   description? : string;
   gallery : string[];
-  reviews: [];
+  reviews: ReviewsProps[];
   discount: string;
 }
 
@@ -47,10 +48,16 @@ export interface PillProps {
 
 
 export interface ReviewsProps{
+  propertyId : number;
   avatar: string;
   name: string;
   rating: string;
   comment: string;
+}
+
+export interface ReviewSectionProps {
+  reviews: ReviewsProps[];
+  propertyId: number;
 }
 
 export interface BookingSectionProps {

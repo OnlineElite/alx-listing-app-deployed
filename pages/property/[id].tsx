@@ -63,6 +63,7 @@ export default function PropertyPage() {
             <PropertyDetail property={property ? property : Property} />
             <ReviewSection
               reviews={property ? property.reviews : Property.reviews}
+              propertyId={ property ? property.id : Property.id} 
             />
           </div>
 

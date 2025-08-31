@@ -1,0 +1,600 @@
+// App configuration
+import { PropertyProps } from "@/interfaces";
+export const APP_NAME = "ALX Listing App";
+export const DEFAULT_LANGUAGE = "en";
+
+// Hero Background Image
+export const HERO_BACKGROUND_IMAGE = "/assets/images/image17.jpg";
+
+// Filter Labels
+export const FILTERS = [
+  "Top Villa",
+  "Self Checkin",
+  "Pet Friendly",
+  "Instant Book",
+  "Beach Front",
+  "Mountain View",
+  "City Center",
+  "Luxury",
+  "Budget Friendly",
+  "Family Friendly",
+];
+
+// Property Types
+export const PROPERTY_TYPES = [
+  "Villa",
+  "Apartment",
+  "Cabin",
+  "Cottage",
+  "Penthouse",
+  "Lodge",
+  "Mansion",
+  "Loft",
+  "Bungalow",
+  "Studio",
+  "Townhouse",
+];
+
+// Sample Property Listings
+export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
+  {
+    name: "Villa Ocean Breeze",
+    address: {
+      state: "Seminyak",
+      city: "Bali",
+      country: "Indonesia",
+    },
+    rating: 4.89,
+    category: ["Luxury Villa", "Pool", "Free Parking"],
+    price: 3200,
+    offers: {
+      bed: "3",
+      shower: "3",
+      occupants: "4-6",
+    },
+    image: "/assets/images/image1.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "",
+  },
+  {
+    name: "Mountain Escape Chalet",
+    address: {
+      state: "Aspen",
+      city: "Colorado",
+      country: "USA",
+    },
+    rating: 4.7,
+    category: ["Mountain View", "Fireplace", "Self Checkin"],
+    price: 1800,
+    offers: {
+      bed: "4",
+      shower: "2",
+      occupants: "5-7",
+    },
+    image: "/assets/images/image2.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "30",
+  },
+  {
+    name: "Cozy Desert Retreat",
+    address: {
+      state: "Palm Springs",
+      city: "California",
+      country: "USA",
+    },
+    rating: 4.92,
+    category: ["Desert View", "Pet Friendly", "Self Checkin"],
+    price: 1500,
+    offers: {
+      bed: "2",
+      shower: "1",
+      occupants: "2-3",
+    },
+    image: "/assets/images/image3.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "",
+  },
+  {
+    name: "City Lights Penthouse",
+    address: {
+      state: "New York",
+      city: "New York",
+      country: "USA",
+    },
+    rating: 4.85,
+    category: ["City View", "Free WiFi", "24h Checkin"],
+    price: 4500,
+    offers: {
+      bed: "2",
+      shower: "2",
+      occupants: "2-4",
+    },
+    image: "/assets/images/image4.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "15",
+  },
+  {
+    name: "Riverside Cabin",
+    address: {
+      state: "Queenstown",
+      city: "Otago",
+      country: "New Zealand",
+    },
+    rating: 4.77,
+    category: ["Riverside", "Private Dock", "Free Kayaks"],
+    price: 2800,
+    offers: {
+      bed: "3",
+      shower: "2",
+      occupants: "4-6",
+    },
+    image: "/assets/images/image4.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "20",
+  },
+  {
+    name: "Modern Beachfront Villa",
+    address: {
+      state: "Sidemen",
+      city: "Bali",
+      country: "Indonesia",
+    },
+    rating: 4.95,
+    category: ["Beachfront", "Private Pool", "Chef Service"],
+    price: 5000,
+    offers: {
+      bed: "5",
+      shower: "4",
+      occupants: "8-10",
+    },
+    image: "/assets/images/image1.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "",
+  },
+  {
+    name: "Lakeside Chalet",
+    address: {
+      state: "Banff",
+      city: "Alberta",
+      country: "Canada",
+    },
+    rating: 4.65,
+    category: ["Lakeside", "Mountain View", "Hiking Trails"],
+    price: 2300,
+    offers: {
+      bed: "3",
+      shower: "3",
+      occupants: "4-5",
+    },
+    image: "/assets/images/image3.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "10",
+  },
+  {
+    name: "Tropical Garden Villa",
+    address: {
+      state: "Koh Samui",
+      city: "Surat Thani",
+      country: "Thailand",
+    },
+    rating: 4.8,
+    category: ["Garden", "Free Parking", "Self Checkin"],
+    price: 2750,
+    offers: {
+      bed: "3",
+      shower: "3",
+      occupants: "5-6",
+    },
+    image: "/assets/images/image2.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "25",
+  },
+  {
+    name: "Urban Loft",
+    address: {
+      state: "Berlin",
+      city: "Berlin",
+      country: "Germany",
+    },
+    rating: 4.6,
+    category: ["City Center", "Free WiFi", "24h Checkin"],
+    price: 2000,
+    offers: {
+      bed: "2",
+      shower: "1",
+      occupants: "2-3",
+    },
+    image: "/assets/images/image2.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "",
+  },
+  {
+    name: "Secluded Forest Cabin",
+    address: {
+      state: "Whistler",
+      city: "British Columbia",
+      country: "Canada",
+    },
+    rating: 4.72,
+    category: ["Secluded", "Hot Tub", "Self Checkin"],
+    price: 2600,
+    offers: {
+      bed: "4",
+      shower: "2",
+      occupants: "5-7",
+    },
+    image: "/assets/images/image4.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "40",
+  },
+  {
+    name: "Cliffside Villa",
+    address: {
+      state: "Amalfi",
+      city: "Salerno",
+      country: "Italy",
+    },
+    rating: 4.93,
+    category: ["Cliffside", "Infinity Pool", "Sea View"],
+    price: 6000,
+    offers: {
+      bed: "4",
+      shower: "4",
+      occupants: "6-8",
+    },
+    image: "/assets/images/image1.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "50",
+  },
+  {
+    name: "Coastal Escape Villa",
+    address: {
+      state: "Noosa",
+      city: "Queensland",
+      country: "Australia",
+    },
+    rating: 4.83,
+    category: ["Beachfront", "Pet Friendly", "Free Parking"],
+    price: 3400,
+    offers: {
+      bed: "3",
+      shower: "3",
+      occupants: "4-6",
+    },
+    image: "/assets/images/image3.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "",
+  },
+  {
+    name: "Historical Villa",
+    address: {
+      state: "Florence",
+      city: "Tuscany",
+      country: "Italy",
+    },
+    rating: 4.67,
+    category: ["Historical", "Free Breakfast", "Self Checkin"],
+    price: 2700,
+    offers: {
+      bed: "2",
+      shower: "2",
+      occupants: "2-4",
+    },
+    image: "/assets/images/image1.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "35",
+  },
+  {
+    name: "Downtown Apartment",
+    address: {
+      state: "Tokyo",
+      city: "Tokyo",
+      country: "Japan",
+    },
+    rating: 4.81,
+    category: ["City Center", "Free WiFi", "Public Transport"],
+    price: 2200,
+    offers: {
+      bed: "1",
+      shower: "1",
+      occupants: "2",
+    },
+    image: "/assets/images/image2.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "",
+  },
+  {
+    name: "Luxury Safari Lodge",
+    address: {
+      state: "Serengeti",
+      city: "Mara",
+      country: "Tanzania",
+    },
+    rating: 4.97,
+    category: ["Safari", "Guided Tours", "Free Breakfast"],
+    price: 4500,
+    offers: {
+      bed: "4",
+      shower: "4",
+      occupants: "6-8",
+    },
+    image: "/assets/images/image3.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "20",
+  },
+  {
+    name: "Countryside Cottage",
+    address: {
+      state: "Cotswolds",
+      city: "Gloucestershire",
+      country: "UK",
+    },
+    rating: 4.58,
+    category: ["Countryside", "Fireplace", "Self Checkin"],
+    price: 1800,
+    offers: {
+      bed: "2",
+      shower: "1",
+      occupants: "2-4",
+    },
+    image: "/assets/images/image4.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "25",
+  },
+  {
+    name: "Riverfront Mansion",
+    address: {
+      state: "Paris",
+      city: "Île-de-France",
+      country: "France",
+    },
+    rating: 4.86,
+    category: ["Riverfront", "Private Garden", "Self Checkin"],
+    price: 5000,
+    offers: {
+      bed: "4",
+      shower: "3",
+      occupants: "6-8",
+    },
+    image: "/assets/images/image2.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "30",
+  },
+  {
+    name: "Ski Chalet",
+    address: {
+      state: "Zermatt",
+      city: "Valais",
+      country: "Switzerland",
+    },
+    rating: 4.75,
+    category: ["Mountain View", "Ski Access", "Fireplace"],
+    price: 3900,
+    offers: {
+      bed: "3",
+      shower: "3",
+      occupants: "4-5",
+    },
+    image: "/assets/images/image1.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "",
+  },
+  {
+    name: "Island Paradise Villa",
+    address: {
+      state: "Mahe",
+      city: "Victoria",
+      country: "Seychelles",
+    },
+    rating: 4.98,
+    category: ["Beachfront", "Private Pool", "Chef Service"],
+    price: 6500,
+    offers: {
+      bed: "5",
+      shower: "5",
+      occupants: "8-10",
+    },
+    image: "/assets/images/image3.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "60",
+  },
+  {
+    name: "Clifftop Retreat",
+    address: {
+      state: "Cape Town",
+      city: "Western Cape",
+      country: "South Africa",
+    },
+    rating: 4.78,
+    category: ["Ocean View", "Private Pool", "Self Checkin"],
+    price: 4100,
+    offers: {
+      bed: "3",
+      shower: "3",
+      occupants: "4-5",
+    },
+    image: "/assets/images/image2.jpg",
+    gallery: [
+      "/assets/images/image17.jpg",
+      "/assets/images/image7.jpg",
+      "/assets/images/image15.jpg",
+      "/assets/images/image14.jpg",
+      "/assets/images/image13.jpg",
+    ],
+    description:
+      "Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you Feel like exploring the Dominican? Start the day with a hike on one of Playa Morons many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you are ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views.",
+    reviews: [],
+    discount: "",
+  },
+];

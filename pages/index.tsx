@@ -88,7 +88,7 @@ export default function Home() {
               isActive={activeFilter === 'All'}
               onClick={() => handleFilterClick('All')}
             />
-            {FILTERS.map((filter) => (
+            {(FILTERS || []).map((filter) => (
               <Pill
                 key={filter}
                 label={filter}
@@ -115,7 +115,7 @@ export default function Home() {
           {/* Property Grid */}
           {filteredProperties.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredProperties.map(({name, address, rating, category, price, offers, image, discount}, key : number) => (
+              {(filteredProperties || []).map(({name, address, rating, category, price, offers, image, discount}, key : number) => (
                 <Card key={key} name={name} address={address} rating={rating} price={price} category={category} offers={offers} image={image} discount={discount} />
               ))}
             </div>

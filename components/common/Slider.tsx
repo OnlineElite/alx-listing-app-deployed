@@ -60,7 +60,7 @@ const Slider: React.FC<GalleryProps> = ({ gallery }) => {
 
       {/* Thumbnails */}
       <div className="flex gap-2 overflow-x-auto mt-3 p-1">
-        {gallery.map((img, index) => (
+        {(gallery.map || [])((img, index) => (
           <Image
             key={index}
             src={img}

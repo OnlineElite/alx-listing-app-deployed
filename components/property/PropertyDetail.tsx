@@ -8,7 +8,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => 
       <h1 className="text-4xl font-bold">{property.name}</h1>
       <div className="flex items-center space-x-2 mt-2">
         <span className="text-yellow-500">{property.rating} stars</span>
-        <span>{property.address.city}, {property.address.country}</span>
+        <span>{property.address?.city || "Unknown City"}, {property.address?.country || "Unknown Country"} </span>
       </div>
 
       {/* Image Grid */}
@@ -41,7 +41,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => 
       <div className="mt-4">
         <h2 className="text-2xl font-semibold">What this place offers</h2>
         <ul className="flex flex-wrap space-x-4">
-          {property.category.map((amenity, index) => (
+          {(property.category || []).map((amenity, index) => (
             <li key={index} className="bg-gray-200 p-2 rounded-md">
               {amenity}
             </li>

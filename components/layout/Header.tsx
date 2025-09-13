@@ -76,7 +76,7 @@ const Header: React.FC = () => {
             {/* Accommodation Types - Desktop */}
             <div className="hidden md:block border-t border-gray-200">
                 <div className="flex items-center space-x-8 py-3 overflow-x-auto">
-                    {accommodationTypes.map((type) => (
+                    {(accommodationTypes || []).map((type) => (
                         <button
                             key={type}
                             onClick={() => setActiveAccommodation(type)}
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
           <div className="px-4 py-3 border-b border-gray-200">
             <h3 className="text-sm font-semibold text-gray-900 mb-2">Types of Accommodation</h3>
             <div className="grid grid-cols-2 gap-2">
-              {accommodationTypes.map((type) => (
+              {(accommodationTypes || []).map((type) => (
                 <button
                   key={type}
                   onClick={() => {

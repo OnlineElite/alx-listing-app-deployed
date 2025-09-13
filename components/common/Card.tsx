@@ -45,14 +45,14 @@ const Card : React.FC<PropertyProps> = ({name, address, rating, category, price,
                     className=" object-cover hover:scale-105 transition-transform duration-300"/>
                 </div>
                 <div className="mt-2">
-                    {category.map((item, index)=> (
+                    {(category || []).map((item, index)=> (
                         <span key={index} className="px-2 mx-1 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">{item}</span>
                     ))}
                 </div>
                 <div className="p-4">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-1">{name}</h3>
                     <div className="flex justify-between items-center">
-                    {address && (<p className="text-sm text-gray-600 mb-2">{address.city}, {address.country} </p>)}
+                    {address && (<p className="text-sm text-gray-600 mb-2">{address?.city || "Unknown City"}, {address?.country || "Unknown Country"} </p>)}
                     {/* {offers? <span className="text-sm text-gray-600">{offers.bed} Bed | {offers.occupants} Occupants | {offers.shower} Shower </span> : ""} */}
                     </div>
                     <div className="flex items-center justify-between mb-2">

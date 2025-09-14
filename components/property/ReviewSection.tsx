@@ -15,7 +15,6 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({ reviews, propertyId}) => 
         const response = await axios.get(`/api/properties/${propertyId}/reviews`);
         setReviewss(response.data);
       } catch (error) {
-        console.log(error.response?.data)
         console.error("Error fetching reviews:", error);
       } finally {
         setLoading(false);

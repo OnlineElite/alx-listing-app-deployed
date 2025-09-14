@@ -24,19 +24,20 @@ const BookingForm = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e : React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
 
     try {
       const response = await axios.post("/api/bookings", formData);
-      alert("Booking confirmed!");
+      alert("Booking confirmed!" +  response);
     } catch (error) {
-      setError("Failed to submit booking.");
+      setError("Failed to submit booking." + error);
     } finally {
+      
       setLoading(false);
     }
   };

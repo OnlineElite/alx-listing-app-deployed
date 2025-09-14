@@ -53,8 +53,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
 
     res.status(200).json(property);
-  } catch (error: any) {
-    console.error("Error fetching property details:", error.message);
-    res.status(500).json({ error: "Failed to fetch property details" });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Error fetching properties:", error.message);
+    }
+    throw new Error("Failed to fetch properties");
   }
 }

@@ -3,6 +3,22 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 //import { PropertyProps } from "@/interfaces"
+interface PropertyItem {
+  id: string;
+  name: string;
+  address: string;
+  city?: string;  // Make city optional
+  rating: number;
+  type: string;
+  price: {
+    rate: number;
+  };
+  beds: number;
+  bathrooms: number;
+  persons: number;
+  images: string[];
+  cancelPolicy: string;
+}
 
 export default async function handler(
   req: NextApiRequest,
@@ -32,7 +48,7 @@ export default async function handler(
     const response = await axios.request(options);
 
     // Format results
-    const formatted = response.data?.results?.map((item: any) => ({
+    const formatted = response.data?.results?.map((item: PropertyItem) => ({
       id : item.id,
       name: item.name,
       address: {
@@ -56,8 +72,10 @@ export default async function handler(
     }));
 
     res.status(200).json(formatted);
-  } catch (error: any) {
-    console.error("Error fetching properties:", error.message);
-    res.status(500).json({ error: "Failed to fetch properties" });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Error fetching properties:", error.message);
+    }
+    throw new Error("Failed to fetch properties");
   }
 }

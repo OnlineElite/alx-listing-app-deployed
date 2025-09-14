@@ -4,6 +4,20 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 import avatar from "@/public/assets/images/avatar.jpg"
 
+interface RatingItem {
+  propertyId?: string;
+  name?: string;
+  __typename?: string;
+  localizedRating?: string;
+  accessibilityLabel?: string;
+}
+interface ApiRatingResponse {
+  data: {
+    ratings: RatingItem[];
+  };
+}
+
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
 
@@ -22,10 +36,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     };
 
-    const response = await axios.request(options);
+    const response : ApiRatingResponse = await axios.request(options);
 
     // Map API response into simplified review objects
-    const reviews = response.data.ratings.map((item : any) => ({
+    const reviews  = response.data.ratings.map((item : RatingItem) => ({
       propertyId : id,
       avatar: avatar,
       name: item.__typename,
@@ -34,9 +48,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }))
 
     res.status(200).json(reviews);
-  } catch (error: any) {
-    console.log(error.response?.data)
-    console.error("Error fetching reviews:", error.message);
-    res.status(500).json({ error: "Failed to fetch property reviews" });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Error fetching properties:", error.message);
+    }
+    throw new Error("Failed to fetch properties");
   }
 }

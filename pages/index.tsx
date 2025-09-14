@@ -115,8 +115,8 @@ export default function Home() {
           {/* Property Grid */}
           {filteredProperties.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {(filteredProperties || []).map(({id, name, address, rating, category, price, offers, image, discount}, key : number) => (
-                <Card key={key} id={id} name={name} address={address} rating={rating} price={price} category={category} offers={offers} image={image} discount={discount} />
+              {(filteredProperties || []).map(({id, name, address, rating, category, price, offers, image, discount, gallery, reviews, description}, key : number) => (
+                <Card key={key} id={id} name={name} address={address} rating={rating} gallery={gallery} reviews={reviews} description={description} price={price} category={category} offers={offers} image={image} discount={discount} />
               ))}
             </div>
           ) : (

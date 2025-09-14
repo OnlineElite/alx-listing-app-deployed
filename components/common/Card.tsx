@@ -2,8 +2,9 @@ import {PropertyProps} from "@/interfaces"
 import Image from "next/image"
 import Link from "next/link";
 import { StarIcon } from 'lucide-react';
+import defaultImg from "@/public/assets/images/default.jpg"
 
-const Card : React.FC<PropertyProps> = ({name, address, rating, category, price, image, discount})=>{
+const Card : React.FC<PropertyProps> = ({id, name, address, rating, category, price, image, discount})=>{
 
     const renderStars = (rating: number) => {
         const stars = [];
@@ -38,10 +39,10 @@ const Card : React.FC<PropertyProps> = ({name, address, rating, category, price,
     };
 
     return(
-        <Link href={`/property/${name}`} className="no-underline">
+        <Link href={`/property/${id}`} className="no-underline">
             <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <div className="relative w-full h-48 overflow-hidden">
-                    <Image src={image}  alt={name} fill
+                    <Image src={image? image : defaultImg}  alt={name} fill 
                     className=" object-cover hover:scale-105 transition-transform duration-300"/>
                 </div>
                 <div className="mt-2">

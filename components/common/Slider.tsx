@@ -5,7 +5,6 @@ import { GalleryProps } from "@/interfaces";
 
 const Slider: React.FC<GalleryProps> = ({ gallery }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? gallery.length - 1 : prev - 1));
   };
@@ -60,7 +59,7 @@ const Slider: React.FC<GalleryProps> = ({ gallery }) => {
 
       {/* Thumbnails */}
       <div className="flex gap-2 overflow-x-auto mt-3 p-1">
-        {(gallery.map || [])((img, index) => (
+        {(gallery || []).map((img, index) => (
           <Image
             key={index}
             src={img}

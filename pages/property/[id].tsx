@@ -1,4 +1,4 @@
-import { PROPERTYLISTINGSAMPLE } from "@/constants/index";
+//import { PROPERTYLISTINGSAMPLE } from "@/constants/index";
 import { useRouter } from "next/router";
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -12,9 +12,9 @@ import Slider from "@/components/common/Slider";
 export default function PropertyPage() {
   const router = useRouter();
   const { id } = router.query;
-  const Property = PROPERTYLISTINGSAMPLE.find(
+ /*  const Property = PROPERTYLISTINGSAMPLE.find(
     (item: PropertyProps) => item.name === id
-  );
+  ); */
 
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
@@ -33,15 +33,16 @@ export default function PropertyPage() {
         setLoading(false);
       }
     };
-
+    
     fetchProperty();
   }, [id]);
-
+  
+  console.log("the reviews sent are ", property? property.reviews : "non")
   if (loading) {
     return <p>Loading...</p>;
   }
 
-  if (!Property) {
+  if (!property) {
     return (
       <p className="p-6 text-center text-red-600 font-semibold">
         Property not found
@@ -54,23 +55,23 @@ export default function PropertyPage() {
       <div className="container mx-auto px-4 py-6 ">
         {/* Image Grid */}
         <div className="">
-          <Slider gallery={property ? property.gallery : Property.gallery} />
+          <Slider gallery={/* property ? */ property.gallery /* : Property.gallery */} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main content: Details & Reviews */}
           <div className="lg:col-span-2 space-y-6">
-            <PropertyDetail property={property ? property : Property} />
+            <PropertyDetail property={property /* ? property : Property */} />
             <ReviewSection
-              reviews={property ? property.reviews : Property.reviews}
-              propertyId={ property ? property.id : Property.id} 
+              reviews={/* property ?  */property.reviews /* : Property.reviews */}
+              propertyId={ /* property ? */ property.id /* : Property.id */} 
             />
           </div>
 
           {/* Sidebar: Booking */}
           <div className="lg:col-span-1 mt-6">
             <BookingSection
-              price={property? property.price : Property.price}
+              price={/* property?  */property.price /* : Property.price */}
               checkIn={checkIn}
               checkOut={checkOut}
               setCheckIn={setCheckIn}

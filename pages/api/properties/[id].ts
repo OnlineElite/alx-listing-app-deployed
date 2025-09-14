@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const options = {
       method: 'GET',
-      url: 'https://airbnb13.p.rapidapi.com/room',
+      url: `${process.env.NEXT_PUBLIC_API_BASE_URL1}/room`,
       params: {
         listing_id: `${id}`,
         locale: 'Paris',

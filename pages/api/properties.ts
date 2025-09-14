@@ -11,7 +11,7 @@ export default async function handler(
   try {
     const options = {
       method: 'GET',
-      url: 'https://airbnb13.p.rapidapi.com/search-location',
+      url: `${process.env.NEXT_PUBLIC_API_BASE_URL1}/search-location`,
       params: {
       location: 'Paris',
       checkin: '2025-09-14',

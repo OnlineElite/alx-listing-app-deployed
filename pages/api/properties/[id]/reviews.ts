@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const options = {
       method: 'GET',
-      url: 'https://airbnb-search.p.rapidapi.com/property/rating',
+      url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/property/rating`,
       params: {id: '50873910'},
       headers: {
         'x-rapidapi-key': process.env.RAPIDAPI_KEY as string,

@@ -46,6 +46,7 @@ export default async function handler(
   };
 
     const response = await axios.request(options);
+    //non
 
     // Format results
     const formatted = response.data?.results?.map((item: PropertyItem) => ({
